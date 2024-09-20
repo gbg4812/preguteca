@@ -36,7 +36,10 @@ YOUTUBE_API_KEY = env("YOUTUBE_API_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ["videotecasondeo.com", "www.videotecasondeo.com"]
+ALLOWED_HOSTS = [
+    "videotecasondeo.com",
+    "www.videotecasondeo.com",
+]
 
 # Application definition
 
@@ -109,12 +112,6 @@ if DEBUG:
     SECURE_SSL_REDIRECT = False
     SESSION_COOKIE_SECURE = False
     CSRF_COOKIE_SECURE = False
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
     ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
 
 # Password validation
